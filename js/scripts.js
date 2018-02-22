@@ -1,4 +1,4 @@
-
+//----------------------ITEMS LEFT TO ADD-----------------------------
 // Todo Item (Checkbox): When a user checks this you should add some kind of class to the list item that strikes through the text and makes the text lighter.
   //Don’t allow it to be edited if the box is checked (So hide the edit button).
 
@@ -7,10 +7,15 @@
 
 // Todo Item (Delete Button): Fairly simple, remove the entire List Item this button is within.
 //How can you target the parent element of the button? The user should be prompted if they are sure they want to delete the Todo before you actually delete it.
+//--------------------------------------------------------------------------------
+
+
+
 
 //creating UL for user items
 let list = document.createElement("ul"),
-  userInput = document.getElementsByClassName("itemInput") [0],
+//user value stored
+  userInput = document.getElementsByClassName("itemInput").value,
   submitBtn = document.getElementById('submit');
 list.classList.add('list');
 
@@ -18,12 +23,18 @@ list.classList.add('list');
 // Input Field: The input field where the user will type in what they want to do.
 
 //This field should be cleared when its text is added to the list of things Todo.
-submitBtn.addEventListener("click", clearText);
+submitBtn.addEventListener("click", clearText && newItem);
 
 function clearText() {
     userInput.value = '';
 }
 
 // Add Todo Button: This is the button that will call our function to add a new Todo to the list.
-
 //The logic behind this function is to dynamically create a new Todo Item list item element.
+function newItem () {
+  let userItem = document.getElementsByClassName("itemInput");
+  let textNode = document.createTextNode(userItem);
+  let li = document.createElement("li");
+  li.appendChild(textNode);
+}
+console.log(li);
