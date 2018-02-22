@@ -39,4 +39,5 @@ function newItem () {
       li.innerHTML = userItem[0].value;
       document.body.appendChild(li);
       console.log("userItem", userItem);
+      clearText();
 }
