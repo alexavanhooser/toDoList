@@ -36,6 +36,7 @@ function clearText() {
 function newItem () {
   let userItem = document.getElementsByClassName("itemInput");
       let li = document.createElement('li');
+      li.innerHTML = userItem[0].value;
       document.body.appendChild(li);
+      console.log("userItem", userItem);
 }
-console.log("li");
