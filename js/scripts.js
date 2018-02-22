@@ -15,8 +15,9 @@
 //creating UL for user items
 let list = document.createElement("ul"),
 //user value stored
-  userInput = document.getElementsByClassName("itemInput").value,
+  userInput = document.getElementsByClassName("itemInput")[0],
   submitBtn = document.getElementById('submit');
+
 list.classList.add('list');
 
 //input field
@@ -29,12 +30,12 @@ function clearText() {
     userInput.value = '';
 }
 
+
 // Add Todo Button: This is the button that will call our function to add a new Todo to the list.
 //The logic behind this function is to dynamically create a new Todo Item list item element.
 function newItem () {
   let userItem = document.getElementsByClassName("itemInput");
-  let textNode = document.createTextNode(userItem);
-  let li = document.createElement("li");
-  li.appendChild(textNode);
+      let li = document.createElement('li');
+      document.body.appendChild(li);
 }
-console.log(li);
+console.log("li");
