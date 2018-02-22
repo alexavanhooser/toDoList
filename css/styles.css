@@ -1,15 +1,13 @@
-.title-txt {
-
+.itemInput {
+  border-radius: 50px;
 }
 
 
-.list {
-
-}
-
-
-.submitButton {
-
+.submitBtn {
+border-radius: 50px;
+background-color: #e2c044;
+font-family: 'Roboto', sans-serif;
+color: white;
 }
 
 /* #253743: input color */
