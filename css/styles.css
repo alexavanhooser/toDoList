@@ -1,13 +1,35 @@
+.container {
+  font-family: 'Playfair Display', serif;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+}
+
+.main-div {
+  font-family: 'Playfair Display', serif;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100%;
+width: 100%;
+flex-direction: column;
+}
+
+
+.title-txt {
+  font-family: 'Playfair Display', serif;
+}
 
 .itemInput {
-
+font-family: 'Playfair Display', serif;
 }
 
 
 .submitBtn {
 background-color: #004346;
-font-family: 'Roboto', sans-serif;
+font-family: 'Playfair Display', serif;
 color: white;
+border-radius: 25px;
 }
 
 /* #253743: input color */

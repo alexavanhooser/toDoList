@@ -14,7 +14,6 @@
 
 //creating UL for user items
 let list = document.createElement("ul"),
-//user value stored
   userInput = document.getElementsByClassName("itemInput")[0],
   submitBtn = document.getElementById('submit');
 
@@ -29,15 +28,22 @@ submitBtn.addEventListener("click", clearText && newItem);
 function clearText() {
     userInput.value = '';
 }
-
+ //.length -1
 
 // Add Todo Button: This is the button that will call our function to add a new Todo to the list.
 //The logic behind this function is to dynamically create a new Todo Item list item element.
 function newItem () {
-  let userItem = document.getElementsByClassName("itemInput");
+      let userItem = document.getElementsByClassName("itemInput");
       let li = document.createElement('li');
-      li.innerHTML = userItem[0].value;
+      li.innerHTML = userItem[0].value + " "; // or you can try this
       document.body.appendChild(li);
-      console.log("userItem", userItem);
+      let iconTag = document.createElement('i');
+      iconTag.setAttribute('class', "fa fa-trash fa-1x");
+      iconTag.setAttribute('aria-hidden', "true");
+      li.appendChild(iconTag);
+      console.log(li);
+      iconTag.addEventListener('click', function() { //This format makes it easier to addEvent listeners to the icons like this! << // Execute whatever you need to do depending on icon -
+          document.body.removeChild(li);//for example we used trash can here, meaning delete, process delete here.
+      });
       clearText();
 }
