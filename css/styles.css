@@ -5,14 +5,35 @@
   align-items: center;
 }
 
+
+input {
+		flex-grow: 2;
+	}
+
+	button {
+		@extend %transition;
+		background: $secondary;
+		border-left: 1px solid ($secondary * 1.05);
+		&:hover {
+			background: $secondary * 1.1;
+		}
+	}
+}
+
+.cool {
+display: inline-block;
+
+}
+
 .main-div {
   font-family: 'Playfair Display', serif;
-display: flex;
-justify-content: center;
-align-items: center;
-height: 100%;
-width: 100%;
-flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:100%;
+  width: 100%;
+  flex-direction: column;
+
 }
 
 
@@ -22,6 +43,7 @@ flex-direction: column;
 
 .itemInput {
 font-family: 'Playfair Display', serif;
+height: 25%;
 }
 
 
@@ -29,8 +51,7 @@ font-family: 'Playfair Display', serif;
 background-color: #004346;
 font-family: 'Playfair Display', serif;
 color: white;
-border-radius: 25px;
 }
 
 /* #253743: input color */
-/*#e2c044: accent color*/
+/*#637081: accent color*/
