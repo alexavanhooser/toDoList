@@ -32,6 +32,5 @@ function newItem () {
       });
       clearText();
 }
-
 // Todo Item (Edit Button): This button will take the text of the Todo item and put it into a textbox, allowing ourselves to edit it then turn it back into plain text when you hit enter.
 //So if you think about it, you’re creating an input element, with an event listener listening for when the user hit the enter key. (Do some google'ing).
